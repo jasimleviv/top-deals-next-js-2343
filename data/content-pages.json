@@ -1,0 +1,215 @@
+[
+  {
+    "slug": "about-us",
+    "title": "About TopDeals Hub",
+    "description": "TopDeals Hub curates verified offers, discounts, and money-saving resources for smart shoppers.",
+    "sections": [
+      {
+        "heading": "Our mission",
+        "body": "We help readers find offers that are clear, current, and worth claiming."
+      },
+      {
+        "heading": "How we work",
+        "body": "Deals are reviewed for usefulness, visible terms, user value, and availability before publication."
+      }
+    ]
+  },
+  {
+    "slug": "how-it-works",
+    "title": "How It Works",
+    "description": "Learn how TopDeals Hub verifies, organizes, and refreshes offers.",
+    "sections": [
+      {
+        "heading": "Verification",
+        "body": "We check offer details, category fit, device support, and basic claim requirements."
+      },
+      {
+        "heading": "Daily updates",
+        "body": "Featured deals are refreshed regularly so expired or unclear offers can be removed."
+      }
+    ]
+  },
+  {
+    "slug": "press",
+    "title": "Press",
+    "description": "Company information and press contact details for TopDeals Hub.",
+    "sections": [
+      {
+        "heading": "Brand overview",
+        "body": "TopDeals Hub is a consumer savings site focused on verified online offers."
+      },
+      {
+        "heading": "Media contact",
+        "body": "For press inquiries, contact support@topdeals.example.com."
+      }
+    ]
+  },
+  {
+    "slug": "careers",
+    "title": "Careers",
+    "description": "Join the team building a trusted destination for verified offers.",
+    "sections": [
+      {
+        "heading": "Open roles",
+        "body": "We look for people who care about clear writing, careful verification, and useful shopper experiences."
+      },
+      {
+        "heading": "How to apply",
+        "body": "Send a short note and relevant experience to support@topdeals.example.com."
+      }
+    ]
+  },
+  {
+    "slug": "contact",
+    "title": "Contact",
+    "description": "Contact TopDeals Hub for support, partnerships, or deal questions.",
+    "sections": [
+      {
+        "heading": "Support",
+        "body": "Email support@topdeals.example.com for help with offers or account questions."
+      },
+      {
+        "heading": "Office",
+        "body": "TopDeals Hub LLC, 123 Market Street, Suite 400, San Francisco, CA 94105."
+      }
+    ]
+  },
+  {
+    "slug": "privacy-policy",
+    "title": "Privacy Policy",
+    "description": "How TopDeals Hub handles privacy, subscriber data, and user rights.",
+    "sections": [
+      {
+        "heading": "Data use",
+        "body": "We use submitted information to send requested deal updates and improve the site experience."
+      },
+      {
+        "heading": "User rights",
+        "body": "You can request access, correction, or deletion of personal data by contacting support."
+      }
+    ]
+  },
+  {
+    "slug": "terms-of-service",
+    "title": "Terms of Service",
+    "description": "Terms for using TopDeals Hub content, offers, and links.",
+    "sections": [
+      {
+        "heading": "Offer availability",
+        "body": "Offers may change, expire, or vary by partner terms and user eligibility."
+      },
+      {
+        "heading": "Affiliate disclosure",
+        "body": "We may earn a commission when users claim certain offers through our links."
+      }
+    ]
+  },
+  {
+    "slug": "cookie-policy",
+    "title": "Cookie Policy",
+    "description": "How cookies support analytics, preferences, and personalized deal experiences.",
+    "sections": [
+      {
+        "heading": "Cookie use",
+        "body": "Cookies can remember preferences, support analytics, and help personalize deal recommendations."
+      },
+      {
+        "heading": "Choices",
+        "body": "You can accept or decline site cookies through the cookie banner and browser settings."
+      }
+    ]
+  },
+  {
+    "slug": "gdpr-rights",
+    "title": "GDPR Rights",
+    "description": "Information about privacy rights for users in applicable regions.",
+    "sections": [
+      {
+        "heading": "Your rights",
+        "body": "Applicable users may request access, correction, deletion, portability, or restriction of personal data."
+      },
+      {
+        "heading": "Requests",
+        "body": "Send privacy requests to support@topdeals.example.com."
+      }
+    ]
+  },
+  {
+    "slug": "advertise-with-us",
+    "title": "Advertise With Us",
+    "description": "Partner with TopDeals Hub to reach deal-focused shoppers.",
+    "sections": [
+      {
+        "heading": "Partner standards",
+        "body": "We prioritize clear terms, real value, and reliable fulfillment when considering partners."
+      },
+      {
+        "heading": "Get in touch",
+        "body": "Email support@topdeals.example.com with partnership details."
+      }
+    ]
+  },
+  {
+    "slug": "accessibility",
+    "title": "Accessibility",
+    "description": "Accessibility commitments for TopDeals Hub.",
+    "sections": [
+      {
+        "heading": "Commitment",
+        "body": "We aim to keep content readable, navigable, and usable across devices and input methods."
+      },
+      {
+        "heading": "Feedback",
+        "body": "Report accessibility issues to support@topdeals.example.com."
+      }
+    ]
+  },
+  {
+    "slug": "sitemap",
+    "title": "Sitemap",
+    "description": "Browse important TopDeals Hub pages and resources.",
+    "sections": [
+      {
+        "heading": "Main pages",
+        "body": "Home, offers, blog resources, company pages, legal pages, and support information."
+      },
+      {
+        "heading": "XML sitemap",
+        "body": "Search engines can access the XML sitemap at /sitemap.xml."
+      }
+    ]
+  },
+  {
+    "slug": "social-twitter",
+    "title": "TopDeals Hub on Twitter",
+    "description": "Follow TopDeals Hub updates and featured offers.",
+    "sections": [
+      {
+        "heading": "Social updates",
+        "body": "This page represents the Twitter social link placeholder for future channel integration."
+      }
+    ]
+  },
+  {
+    "slug": "social-facebook",
+    "title": "TopDeals Hub on Facebook",
+    "description": "Follow TopDeals Hub community updates.",
+    "sections": [
+      {
+        "heading": "Social updates",
+        "body": "This page represents the Facebook social link placeholder for future channel integration."
+      }
+    ]
+  },
+  {
+    "slug": "social-instagram",
+    "title": "TopDeals Hub on Instagram",
+    "description": "Follow TopDeals Hub deal highlights.",
+    "sections": [
+      {
+        "heading": "Social updates",
+        "body": "This page represents the Instagram social link placeholder for future channel integration."
+      }
+    ]
+  }
+]
