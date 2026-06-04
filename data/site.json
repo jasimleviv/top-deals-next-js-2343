@@ -2,7 +2,7 @@
   "siteConfig": {
     "name": "TopDeals Hub",
     "shortName": "Top Deals",
-    "url": "https://topdeals.example.com",
+    "url": "https://top-deals.promotaa.com",
     "title": "Top Deals and Exclusive Offers & Deals | Save Big Today",
     "description": "Discover the best exclusive offers, deals, and savings curated for you. Trusted by 250,000+ users. Claim your offer today and start saving instantly.",
     "ogTitle": "TopDeals Hub - Exclusive Offers & Deals",
@@ -34,11 +34,11 @@
   "breadcrumbs": [
     {
       "name": "Home",
-      "item": "https://topdeals.example.com"
+      "item": "https://top-deals.promotaa.com"
     },
     {
       "name": "Top Deals",
-      "item": "https://topdeals.example.com/#offers"
+      "item": "https://top-deals.promotaa.com/#offers"
     }
   ],
   "webpageJsonLd": {
@@ -46,10 +46,10 @@
     "@type": "WebPage",
     "name": "Top Deals",
     "description": "Everyday's Top Deals and Offers",
-    "url": "https://topdeals.example.com",
+    "url": "https://top-deals.promotaa.com",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://topdeals.example.com/?q={search_term_string}",
+      "target": "https://top-deals.promotaa.com/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   },
@@ -83,13 +83,13 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://topdeals.example.com"
+        "item": "https://top-deals.promotaa.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Top Deals",
-        "item": "https://topdeals.example.com/#offers"
+        "item": "https://top-deals.promotaa.com/#offers"
       }
     ]
   }
