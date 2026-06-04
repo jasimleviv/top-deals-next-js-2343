@@ -1,4 +1,5 @@
 import { StaticSection } from "./StaticSection";
+export { Offers } from "./Offers";
 
 export function Header() {
   return <StaticSection id="header" />;
@@ -18,10 +19,6 @@ export function Ticker() {
 
 export function PressBar() {
   return <StaticSection id="press-bar" />;
-}
-
-export function Offers() {
-  return <StaticSection id="offers" />;
 }
 
 export function Benefits() {

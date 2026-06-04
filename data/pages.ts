@@ -22,6 +22,8 @@ export type OfferPage = {
   description: string;
   highlights: string[];
   cta: string;
+  readMore: string;
+  "cta-link": string;
 };
 
 export type BlogPage = {

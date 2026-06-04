@@ -38,7 +38,7 @@ export default async function OfferDetailPage({ params }: OfferPageProps) {
             <li key={highlight}>{highlight}</li>
           ))}
         </ul>
-        <a href="/#lead" className="btn btn-primary btn-lg">
+        <a href={offer["cta-link"]} className="btn btn-primary btn-lg">
           {offer.cta}
         </a>
       </div>

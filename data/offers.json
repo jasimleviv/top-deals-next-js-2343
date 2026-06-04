@@ -12,6 +12,7 @@
          "30-day refund window"
       ],
       "cta" : "Claim 82% Off",
+      "readMore" : "Read More",
       "cta-link" : "/deals/ultravpn-premium"
    },
    {
@@ -27,6 +28,7 @@
          "Encrypted vault"
       ],
       "cta" : "Install and Play Now",
+      "readMore" : "Read More",
       "cta-link" : "https://playabledownload.com/show.php?l=0&u=2522880&id=74714"
    },
    {
@@ -42,6 +44,7 @@
          "Cancel anytime"
       ],
       "cta" : "Unlock Free Trial",
+      "readMore" : "Read More",
       "cta-link" : "/deals/wealthtrack-plus"
    },
    {
@@ -57,6 +60,7 @@
          "Mobile app access"
       ],
       "cta" : "Start for Free",
+      "readMore" : "Read More",
       "cta-link" : "/deals/mindfulme-premium"
    },
    {
@@ -72,6 +76,7 @@
          "Private file sharing"
       ],
       "cta" : "Get 3 Months Free",
+      "readMore" : "Read More",
       "cta-link" : "/deals/cloudvault-2tb"
    },
    {
@@ -87,6 +92,7 @@
          "Dark web monitoring"
       ],
       "cta" : "Claim Free Year",
+      "readMore" : "Read More",
       "cta-link" : "/deals/guardshield-antivirus"
    },
    {
@@ -102,6 +108,7 @@
          "Up to 70% savings"
       ],
       "cta" : "Get Instant Access",
+      "readMore" : "Read More",
       "cta-link" : "/deals/premium-savings-bundle"
    }
 ]
