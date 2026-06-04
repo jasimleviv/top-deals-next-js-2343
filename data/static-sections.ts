@@ -1,4 +1,4 @@
-import staticSectionsData from "./static-sections.json";
+import { getRemoteJson } from "./remote";
 
 export type StaticSection = {
   id: string;
@@ -6,8 +6,17 @@ export type StaticSection = {
   html: string;
 };
 
-export const staticSections = staticSectionsData satisfies StaticSection[];
+export function getStaticSections() {
+  return getRemoteJson<StaticSection[]>("static-sections.json");
+}
 
-export const sectionById = Object.fromEntries(
-  staticSections.map((section) => [section.id, section]),
-) as Record<string, StaticSection>;
+export async function getSectionById(id: string) {
+  const staticSections = await getStaticSections();
+  const section = staticSections.find((item) => item.id === id);
+
+  if (!section) {
+    throw new Error(`Static section "${id}" was not found in remote data.`);
+  }
+
+  return section;
+}

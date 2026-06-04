@@ -1,8 +1,15 @@
 import type { MetadataRoute } from "next";
-import { blogPages, contentPages, offerPages } from "@/data/pages";
-import { siteConfig } from "@/data/site";
+import { getBlogPages, getContentPages, getOfferPages } from "@/data/pages";
+import { getSiteConfig } from "@/data/site";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [blogPages, contentPages, offerPages, siteConfig] = await Promise.all([
+    getBlogPages(),
+    getContentPages(),
+    getOfferPages(),
+    getSiteConfig(),
+  ]);
+
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: siteConfig.url,

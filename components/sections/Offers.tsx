@@ -1,4 +1,4 @@
-import { offerPages } from "@/data/pages";
+import { getOfferPages } from "@/data/pages";
 
 const categoryFilters = [
   { label: "All Offers", value: "all" },
@@ -42,7 +42,9 @@ function OfferIcon() {
   );
 }
 
-export function Offers() {
+export async function Offers() {
+  const offerPages = await getOfferPages();
+
   return (
     <section id="offers" className="section" aria-labelledby="offers-heading">
       <div className="container">

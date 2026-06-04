@@ -1,8 +1,39 @@
-import siteData from "./site.json";
+import { getRemoteJson } from "./remote";
 
-export const siteConfig = siteData.siteConfig;
-export const navigationLinks = siteData.navigationLinks;
-export const breadcrumbs = siteData.breadcrumbs;
-export const webpageJsonLd = siteData.webpageJsonLd;
-export const faqJsonLd = siteData.faqJsonLd;
-export const breadcrumbJsonLd = siteData.breadcrumbJsonLd;
+export type SiteConfig = {
+  name: string;
+  shortName: string;
+  title: string;
+  description: string;
+  url: string;
+  ogTitle: string;
+  ogDescription: string;
+  ogImage: string;
+};
+
+export type SiteData = {
+  siteConfig: SiteConfig;
+  navigationLinks: unknown[];
+  breadcrumbs: unknown[];
+  webpageJsonLd: Record<string, unknown>;
+  faqJsonLd: Record<string, unknown>;
+  breadcrumbJsonLd: Record<string, unknown>;
+};
+
+export function getSiteData() {
+  return getRemoteJson<SiteData>("site.json");
+}
+
+export async function getSiteConfig() {
+  return (await getSiteData()).siteConfig;
+}
+
+export async function getStructuredData() {
+  const siteData = await getSiteData();
+
+  return {
+    webpageJsonLd: siteData.webpageJsonLd,
+    faqJsonLd: siteData.faqJsonLd,
+    breadcrumbJsonLd: siteData.breadcrumbJsonLd,
+  };
+}

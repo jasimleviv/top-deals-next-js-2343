@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ContentShell } from "@/components/layout/ContentShell";
-import { contentPages } from "@/data/pages";
-import { siteConfig } from "@/data/site";
+import { getContentPages } from "@/data/pages";
+import { getSiteConfig } from "@/data/site";
 
 type GenericPageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
+  const contentPages = await getContentPages();
+
   return contentPages.map((page) => ({ slug: page.slug }));
 }
 
 export async function generateMetadata({ params }: GenericPageProps): Promise<Metadata> {
   const { slug } = await params;
+  const [contentPages, siteConfig] = await Promise.all([getContentPages(), getSiteConfig()]);
   const page = contentPages.find((item) => item.slug === slug);
   if (!page) return {};
 
@@ -26,6 +29,7 @@ export async function generateMetadata({ params }: GenericPageProps): Promise<Me
 
 export default async function GenericContentPage({ params }: GenericPageProps) {
   const { slug } = await params;
+  const contentPages = await getContentPages();
   const page = contentPages.find((item) => item.slug === slug);
   if (!page) notFound();
 

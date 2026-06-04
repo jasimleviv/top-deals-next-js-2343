@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ContentShell } from "@/components/layout/ContentShell";
-import { blogPages } from "@/data/pages";
-import { siteConfig } from "@/data/site";
+import { getBlogPages } from "@/data/pages";
+import { getSiteConfig } from "@/data/site";
 
 type BlogPageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
+  const blogPages = await getBlogPages();
+
   return blogPages.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
   const { slug } = await params;
+  const [blogPages, siteConfig] = await Promise.all([getBlogPages(), getSiteConfig()]);
   const post = blogPages.find((item) => item.slug === slug);
   if (!post) return {};
 
@@ -26,6 +29,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
 
 export default async function BlogDetailPage({ params }: BlogPageProps) {
   const { slug } = await params;
+  const blogPages = await getBlogPages();
   const post = blogPages.find((item) => item.slug === slug);
   if (!post) notFound();
 

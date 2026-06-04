@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ContentShell } from "@/components/layout/ContentShell";
-import { offerPages } from "@/data/pages";
-import { siteConfig } from "@/data/site";
+import { getOfferPages } from "@/data/pages";
+import { getSiteConfig } from "@/data/site";
 
 type OfferPageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
+  const offerPages = await getOfferPages();
+
   return offerPages.map((offer) => ({ slug: offer.slug }));
 }
 
 export async function generateMetadata({ params }: OfferPageProps): Promise<Metadata> {
   const { slug } = await params;
+  const [offerPages, siteConfig] = await Promise.all([getOfferPages(), getSiteConfig()]);
   const offer = offerPages.find((item) => item.slug === slug);
   if (!offer) return {};
 
@@ -26,6 +29,7 @@ export async function generateMetadata({ params }: OfferPageProps): Promise<Meta
 
 export default async function OfferDetailPage({ params }: OfferPageProps) {
   const { slug } = await params;
+  const offerPages = await getOfferPages();
   const offer = offerPages.find((item) => item.slug === slug);
   if (!offer) notFound();
 

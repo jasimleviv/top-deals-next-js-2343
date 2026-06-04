@@ -19,9 +19,11 @@ import {
 } from "@/components/sections/Sections";
 import { ClientInteractions } from "@/components/ClientInteractions";
 import { StructuredData } from "@/components/StructuredData";
-import { breadcrumbJsonLd, faqJsonLd, webpageJsonLd } from "@/data/site";
+import { getStructuredData } from "@/data/site";
 
-export default function Home() {
+export default async function Home() {
+  const { webpageJsonLd, faqJsonLd, breadcrumbJsonLd } = await getStructuredData();
+
   return (
     <>
       <StructuredData data={webpageJsonLd} />

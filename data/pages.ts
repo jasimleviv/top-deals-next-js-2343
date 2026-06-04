@@ -1,6 +1,4 @@
-import blogPagesData from "./blogs.json";
-import contentPagesData from "./content-pages.json";
-import offerPagesData from "./offers.json";
+import { getRemoteJson } from "./remote";
 
 export type ContentSection = {
   heading: string;
@@ -36,12 +34,28 @@ export type BlogPage = {
   sections: ContentSection[];
 };
 
-export const offerPages = offerPagesData satisfies OfferPage[];
-export const blogPages = blogPagesData satisfies BlogPage[];
-export const contentPages = contentPagesData satisfies ContentPage[];
+export function getOfferPages() {
+  return getRemoteJson<OfferPage[]>("offers.json");
+}
 
-export const allContentSlugs = new Set([
-  ...contentPages.map((page) => page.slug),
-  ...offerPages.map((page) => `offers/${page.slug}`),
-  ...blogPages.map((page) => `blog/${page.slug}`),
-]);
+export function getBlogPages() {
+  return getRemoteJson<BlogPage[]>("blogs.json");
+}
+
+export function getContentPages() {
+  return getRemoteJson<ContentPage[]>("content-pages.json");
+}
+
+export async function getAllContentSlugs() {
+  const [contentPages, offerPages, blogPages] = await Promise.all([
+    getContentPages(),
+    getOfferPages(),
+    getBlogPages(),
+  ]);
+
+  return new Set([
+    ...contentPages.map((page) => page.slug),
+    ...offerPages.map((page) => `offers/${page.slug}`),
+    ...blogPages.map((page) => `blog/${page.slug}`),
+  ]);
+}
